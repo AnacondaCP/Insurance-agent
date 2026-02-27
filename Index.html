@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>mikecitra.ins | Agen Allianz Indonesia</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+box-sizing:border-box;
+font-family:'Inter',sans-serif;
+}
+
+body{
+margin:0;
+background:#020617;
+color:white;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+/* NAVBAR */
+
+.nav{
+position:fixed;
+width:100%;
+top:0;
+background:rgba(2,6,23,0.6);
+backdrop-filter:blur(20px);
+padding:18px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:999;
+}
+
+.logo{
+font-weight:800;
+font-size:22px;
+background:linear-gradient(90deg,#60a5fa,#2563eb);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.nav a{
+color:white;
+text-decoration:none;
+margin-left:25px;
+opacity:0.8;
+}
+
+.nav a:hover{
+opacity:1;
+}
+
+/* HERO */
+
+.hero{
+padding-top:160px;
+padding-bottom:100px;
+text-align:center;
+position:relative;
+overflow:hidden;
+}
+
+.glow1,.glow2{
+position:absolute;
+border-radius:50%;
+filter:blur(140px);
+opacity:0.4;
+}
+
+.glow1{
+width:400px;
+height:400px;
+background:#2563eb;
+top:50px;
+left:30%;
+}
+
+.glow2{
+width:400px;
+height:400px;
+background:#22c55e;
+top:200px;
+right:30%;
+}
+
+.hero h1{
+font-size:52px;
+font-weight:800;
+margin-bottom:10px;
+}
+
+.hero p{
+font-size:18px;
+opacity:0.7;
+}
+
+/* CONTAINER */
+
+.container{
+max-width:1100px;
+margin:auto;
+padding:20px;
+}
+
+/* CARD */
+
+.card{
+background:rgba(255,255,255,0.04);
+backdrop-filter:blur(30px);
+border-radius:20px;
+padding:35px;
+margin-top:25px;
+box-shadow:0 0 40px rgba(37,99,235,0.2);
+}
+
+.card h2{
+margin-top:0;
+}
+
+/* FORM */
+
+input,select{
+width:100%;
+padding:14px;
+margin-top:5px;
+margin-bottom:15px;
+border-radius:12px;
+border:none;
+background:rgba(255,255,255,0.08);
+color:white;
+font-size:16px;
+}
+
+input:focus,select:focus{
+outline:none;
+box-shadow:0 0 0 2px #2563eb;
+}
+
+/* RESULT */
+
+.result{
+background:rgba(255,255,255,0.05);
+padding:25px;
+border-radius:16px;
+margin-top:10px;
+text-align:center;
+}
+
+.price{
+font-size:40px;
+font-weight:800;
+background:linear-gradient(90deg,#22c55e,#4ade80);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+/* BUTTON */
+
+.btn{
+display:inline-block;
+padding:16px 28px;
+margin-top:15px;
+border-radius:12px;
+background:linear-gradient(90deg,#2563eb,#3b82f6);
+color:white;
+text-decoration:none;
+font-weight:600;
+}
+
+/* CONTACT */
+
+.contact-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:15px;
+}
+
+/* FLOAT WA */
+
+.wa{
+position:fixed;
+bottom:25px;
+right:25px;
+background:#22c55e;
+width:65px;
+height:65px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:28px;
+color:white;
+text-decoration:none;
+box-shadow:0 0 25px rgba(34,197,94,0.6);
+}
+
+/* FOOTER */
+
+.footer{
+text-align:center;
+opacity:0.5;
+margin:40px 0;
+}
+
+@media(max-width:700px){
+
+.hero h1{
+font-size:34px;
+}
+
+.contact-grid{
+grid-template-columns:1fr;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="nav">
+
+<div class="logo">mikecitra.ins</div>
+
+<div>
+<a href="#calc">Kalkulator</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</div>
+
+</div>
+
+<div class="hero">
+
+<div class="glow1"></div>
+<div class="glow2"></div>
+
+<h1>Proteksi Finansial Modern</h1>
+
+<p>
+Agent Resmi Allianz Indonesia â€¢ Proteksi Jiwa â€¢ Penyakit Kritis â€¢ Financial Planning
+</p>
+
+<a href="#calc" class="btn">
+Hitung Premi Sekarang
+</a>
+
+</div>
+
+<div class="container">
+
+<div class="card" id="calc">
+
+<h2>Kalkulator Premi</h2>
+
+<label>Usia</label>
+<input type="number" id="age" value="30">
+
+<label>Jenis Kelamin</label>
+<select id="gender">
+<option value="male">Laki-laki</option>
+<option value="female">Perempuan</option>
+</select>
+
+<label>Uang Pertanggungan</label>
+<input type="number" id="coverage" value="1000000000">
+
+<label>Masa Bayar</label>
+<select id="term">
+<option value="5">5 Tahun</option>
+<option value="10">10 Tahun</option>
+<option value="20">20 Tahun</option>
+<option value="30">30 Tahun</option>
+</select>
+
+<div class="result">
+
+Estimasi Premi per Tahun
+
+<div class="price" id="result">
+Rp 0
+</div>
+
+<a id="waButton" class="btn">
+Konsultasi via WhatsApp
+</a>
+
+</div>
+
+</div>
+
+<div class="card" id="about">
+
+<h2>About mikecitra.ins</h2>
+
+<p>
+mikecitra.ins adalah agent resmi Allianz Indonesia yang membantu klien mendapatkan perlindungan finansial terbaik dengan pendekatan profesional dan transparan.
+</p>
+
+<p>
+Fokus utama adalah proteksi penyakit kritis, proteksi jiwa, dan perencanaan finansial jangka panjang untuk memastikan keamanan finansial Anda dan keluarga.
+</p>
+
+</div>
+
+<div class="card" id="contact">
+
+<h2>Contact</h2>
+
+<div class="contact-grid">
+
+<a class="btn" href="https://wa.me/6281386590899">
+WhatsApp 081386590899
+</a>
+
+<a class="btn" href="https://instagram.com/manivest.co">
+Instagram manivest.co
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="footer">
+Â© 2026 mikecitra.ins | Agen Allianz Indonesia
+</div>
+
+<a class="wa" id="waFloat">
+âœ†
+</a>
+
+<script>
+
+const age=document.getElementById("age");
+const gender=document.getElementById("gender");
+const coverage=document.getElementById("coverage");
+const term=document.getElementById("term");
+const result=document.getElementById("result");
+const waButton=document.getElementById("waButton");
+const waFloat=document.getElementById("waFloat");
+
+function calc(){
+
+let a=Number(age.value||0);
+let g=gender.value;
+let c=Number(coverage.value||0);
+let t=Number(term.value||5);
+
+let rate=0;
+
+if(g=="male"){
+
+if(a<=25) rate=900;
+else if(a<=35) rate=1400;
+else if(a<=45) rate=2500;
+else rate=4500;
+
+}else{
+
+if(a<=25) rate=800;
+else if(a<=35) rate=1200;
+else if(a<=45) rate=2200;
+else rate=4000;
+
+}
+
+let premium=(c/1000000)*rate;
+
+let discount=1;
+
+if(t>=10) discount=0.9;
+if(t>=20) discount=0.8;
+if(t>=30) discount=0.7;
+
+premium*=discount;
+
+premium=Math.round(premium);
+
+result.innerHTML="Rp "+premium.toLocaleString("id-ID");
+
+let message=`Halo, saya ingin konsultasi.
+
+Usia: ${a}
+Gender: ${g}
+UP: Rp ${c.toLocaleString("id-ID")}
+Masa Bayar: ${t} tahun
+Estimasi Premi: Rp ${premium.toLocaleString("id-ID")}`;
+
+let link="https://wa.me/6281386590899?text="+encodeURIComponent(message);
+
+waButton.href=link;
+waFloat.href=link;
+
+}
+
+age.oninput=calc;
+gender.oninput=calc;
+coverage.oninput=calc;
+term.oninput=calc;
+
+calc();
+
+</script>
+
+</body>
+</html>
